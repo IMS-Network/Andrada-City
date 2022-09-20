@@ -1,82 +1,103 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>IMS - Network | Andrada City</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    document.body.style.cursor = 'none';
-    </script>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-
-    <!-- UDF Gaming Logo Top Left small -->
-
-        
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                  </ol>
-                  <div class="carousel-inner" role="listbox">
-                    <!-- Slide One - Set the background image for this slide in the line below -->
-                    <div class="carousel-item active" style="background-image: url('./images/load_1.jpg')">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Welcome to Andrada City</h2>
-                        <p class="lead">High Quality FiveM Server</p>
-                      </div>
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/fonts.css">
+        <title>Loading Screen</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/all.min.js"></script>
+    </header>
+    <body>
+        <iframe id="youtube-player" class="bg" src="https://www.youtube.com/embed/ur6uoxXY-7M?enablejsapi=1&autoplay=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <img id="cursor" src="assets/media/cursor.png">
+        <div class="overlay">
+            <div class="cornercontainer">
+                <div class="top">
+                    <div class="left">
+                        <p class="title">Andrada City</p>
+                        <p class="date" id="date"></p>
+                        <p class="state" id="clients">0/0</p>
                     </div>
-                    <!-- Slide Two - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('./images/load_6.jpg')">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Powered By IMS - Network</h2>
-                        <p class="lead">Secured By Cloudflare</p>
-                      </div>
+                    <div class="right">
+                        <img class="logo" src="assets/media/small-logo.png">
                     </div>
-                    <!-- Slide Three - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('./images/load_2.jpg')">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Check Out The FiveM Portal</h2>
-                        <p class="lead">https://fivem-web.ims-network.net</p>
-                      </div>
-                    </div>
-                    <!-- Slide Four - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('./images/load_4.jpg')">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Join Our Main Discord Server</h2>
-                        <p class="lead">https://discord.ims-network.net</p>
-                      </div>
-                    </div>
-                    <!-- Slide Five - Set the background image for this slide in the line below -->
-                    <div class="carousel-item" style="background-image: url('./images/load_5.jpg')">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-4">Did You Know Andrada City Is Open Source</h2>
-                        <p class="lead">https://github.com/ims-network</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-  
-  <script>$(document).ready(function() {
-  jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds
-});</script>
-              
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
+                <div class="sounds">
+                    <div class="switch">
+                        <label class="form-switch">
+                            <input type="checkbox" id="sounds">
+                            <i></i>
+                        </label>
+                        <span class="left">Play</span>
+                        <span class="right">Stop</span>
+                    </div>
+                    <div class="icon"><i class="fas fa-volume"></i></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="information">
+                    <p class="title">IMS - FiveM | Andrada City</p>
+                    <div class="description"><p>Welcome To Andrada City, A FiveM RP Server Owned By IMS - Network
+                        Andrada City RP Give Players A unique High Quality & Secure Experience 
+                        Our Goal Is To Create A Good Enjoyable RP Server, 
+                        That Can Fill Your Free Time With Fun Memorise And Quality Interactions
+                    </p></div>
+                    <div class="buttons">
+                        <button id="read-more">Read More! <i class="fal fa-long-arrow-right" style="margin-left: 0.4vw;font-size: 0.9vw;"></i></button>
+                        <button id="collapse" style="display: none;">Thanks, Read Less!</button>
+                    </div>
+                </div>
+
+                <div class="loader">
+                    <div class="logo">
+                        <img class="transparent-logo" src="assets/media/transparent-logo.png">
+                        <img class="filled-logo" src="assets/media/filled-logo.png">
+                    </div>
+                    <p class="progress">0%</p>
+                    <p class="description">Loading server...</p>
+                </div>
+
+                <div class="categories">
+                    <div class="buttons">
+
+                    </div>
+                    <div class="carousel">
+                        <div class="socialmedia">
+
+                        </div>
+                        <div class="rules">
+
+                        </div>
+                        <div class="staff">
+                            <div class="previous"></div>
+                            <div class="cards">
+                                <div class="innercards">
+        
+                                </div>
+                                <div class="pages">
+                                    
+                                </div>
+                            </div>
+                            <div class="next"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hideoverlay">
+                    <div class="bind"></div>
+                    HIDE OVERLAY/SHOW VIDEO
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/scripts/config.js" type="text/javascript"></script>
+        <script src="assets/scripts/main.js" type="text/javascript"></script>
+
+        <audio id="music" autoplay>
+            <source src="" tyle="audio/mpeg">
+        </audio>
+    </body>
 </html>
