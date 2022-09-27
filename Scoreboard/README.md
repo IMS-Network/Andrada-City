@@ -13,8 +13,7 @@ A FiveM Scrobord Used on Andrada City
 - Made from scrath with love.
 
 ## Dependency
-- [esx - legacy](https://github.com/esx-framework/esx-legacy)\
-- - esx_identity
+- [esx - legacy](https://github.com/esx-framework/esx-legacy)
 
 # Credits
 [renzuzu 💖](https://github.com/renzuzu/renzu_scoreboard)
