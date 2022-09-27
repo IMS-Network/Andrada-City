@@ -260,7 +260,7 @@ AddEventHandler('playerDropped', function()
     --GlobalState.Player_list = deepcopy(list)
     players[source] = nil
     loading[source] = nil
-    GlobalState.PlayerCount = GlobalState.PlayerCount - 1
+   -- GlobalState.PlayerCount = GlobalState.PlayerCount - 1
 end)
 
 function Database(plugin,type,query,var)
