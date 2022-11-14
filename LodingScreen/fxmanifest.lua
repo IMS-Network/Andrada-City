@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'thefourCraft, NaorNC' -- # Discord - Discord.gg/cKt4Mpd2PQ
 description 'FiveM Loding Screen By NaorNC'
-version '1.0.0'
+version '1.0.1'
 
 
 files {
