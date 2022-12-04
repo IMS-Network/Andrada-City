@@ -17,6 +17,10 @@
 [submodule "ProjectError/esx-npwd"]
 	path = ProjectError/esx-npwd
 	url = https://github.com/overextended/esx-npwd
+# Overextended
 [submodule "Overextended/oxmysql"]
 	path = Overextended/oxmysql
 	url = https://github.com/overextended/oxmysql
+[submodule "Overextended/ox_core"]
+	path = Overextended/ox_core
+	url = https://github.com/overextended/ox_core
