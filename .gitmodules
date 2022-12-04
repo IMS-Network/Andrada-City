@@ -33,3 +33,14 @@
 [submodule "ProjectError/pefcl-esx"]
 	path = ProjectError/pefcl-esx
 	url = https://github.com/project-error/pefcl-esx
+# andristum
+[submodule "dpclothing"]
+	path = dpclothing
+	url = https://github.com/andristum/dpclothing
+# esx-framework
+[submodule "esx-legacy"]
+	path = esx-legacy
+	url = https://github.com/esx-framework/esx-legacy
+[submodule "vehcontrol"]
+	path = vehcontrol
+	url = https://github.com/Manvaril/vehcontrol
