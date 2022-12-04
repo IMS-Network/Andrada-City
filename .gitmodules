@@ -16,3 +16,6 @@
 [submodule "esx-npwd"]
 	path = ProjectError/esx-npwd
 	url = https://github.com/overextended/esx-npwd
+[submodule "ProjectError/npwd"]
+	path = ProjectError/npwd
+	url = https://github.com/project-error/npwd
