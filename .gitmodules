@@ -1,3 +1,6 @@
 [submodule "pma-voice"]
 	path = pma-voice
 	url = https://github.com/AvarianKnight/pma-voice
+[submodule "vMenu"]
+	path = vMenu
+	url = https://github.com/TomGrobbe/vMenu
