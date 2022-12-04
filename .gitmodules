@@ -5,7 +5,7 @@
 	path = vMenu
 	url = https://github.com/TomGrobbe/vMenu
 [submodule "npwd"]
-	path = npwd
+	path = ProjectError/npwd
 	url = https://github.com/project-error/npwd
 [submodule "pefcl"]
 	path = ProjectError/pefcl
