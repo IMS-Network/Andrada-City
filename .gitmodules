@@ -41,6 +41,7 @@
 [submodule "esx-legacy"]
 	path = esx-legacy
 	url = https://github.com/esx-framework/esx-legacy
+# Manvaril
 [submodule "vehcontrol"]
 	path = vehcontrol
 	url = https://github.com/Manvaril/vehcontrol
