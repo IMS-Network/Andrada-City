@@ -24,3 +24,12 @@
 [submodule "Overextended/ox_core"]
 	path = Overextended/ox_core
 	url = https://github.com/overextended/ox_core
+[submodule "Overextended/ox_lib"]
+	path = Overextended/ox_lib
+	url = https://github.com/overextended/ox_lib
+[submodule "Overextended/ox_target"]
+	path = Overextended/ox_target
+	url = https://github.com/overextended/ox_target
+[submodule "ProjectError/pefcl-esx"]
+	path = ProjectError/pefcl-esx
+	url = https://github.com/project-error/pefcl-esx
