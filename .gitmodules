@@ -22,3 +22,9 @@
 [submodule "ProjectError/pefcl"]
 	path = ProjectError/pefcl
 	url = https://github.com/project-error/pefcl
+[submodule "ProjectError/screenshot-basic"]
+	path = ProjectError/screenshot-basic
+	url = https://github.com/project-error/screenshot-basic
+[submodule "ProjectError/esx-npwd"]
+	path = ProjectError/esx-npwd
+	url = https://github.com/overextended/esx-npwd
