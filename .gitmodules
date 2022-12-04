@@ -19,3 +19,6 @@
 [submodule "ProjectError/npwd"]
 	path = ProjectError/npwd
 	url = https://github.com/project-error/npwd
+[submodule "ProjectError/pefcl"]
+	path = ProjectError/pefcl
+	url = https://github.com/project-error/pefcl
