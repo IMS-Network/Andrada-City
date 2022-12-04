@@ -1,4 +1,4 @@
-# Andrada-City 🏙
+# Andrada City 🏙
 Our FiveM Project Public Files\
 IP: fivem.ims-network.net
 
@@ -11,8 +11,12 @@ Don't Forget To Credit Everyone And Respect Their Work
 [Discord](https://discord.gg/Rh59jp4hWy)\
 [Website](https://fivem-web.ims-network.net)\
 [Legal Information](https://legal.ims-network.net)
-## Legal Infomration ⚖
-We Give Credit and tag all users, if someone wants to file a DMCA takedown\
-Please Follow This Link:\
-[Beta Version](https://open-source.ims-network.net/tags/fivem/)\
-We Respect Your Work And Remove It From The Repo If You Are The Owner
+## Legal Information ⚖
+we try to credit everyone for their amazing work!\
+on this repository, you can find all the opensource code that powers our FiveM city\
+Andrada City also uses paid licensed code and we give credit to those developers on our copyright website\
+> **Note**
+> The website backend code is also opensource so if any developer wants to fix issues on his page [click here](https://github.com/IMS-Network/IMS-Copyrights)
+
+### [Copyright Website](https://open-source.ims-network.org/tags/fivem/)
+
