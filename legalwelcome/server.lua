@@ -2,10 +2,8 @@ AddEventHandler("playerConnecting", function(playerName, setKickReason, deferral
     local count = GetNumPlayerIndices()
     local maxPlayers = GetConvarInt("sv_maxclients", 64)
     
-    deferrals.defer()
+    deferrals.update("IMS - Network FiveM | Andrada City\nWelcome, " .. playerName .. ".\nWe are currently asking you a question.\n\nPlease wait...")
     
-    Wait(1)
-
     local card = {
         type = "AdaptiveCard",
         body = {
@@ -40,14 +38,18 @@ AddEventHandler("playerConnecting", function(playerName, setKickReason, deferral
     }
 
     local function CheckChoice(data)
-        if (data.success) then
-            if (count >= maxPlayers) then
-                deferrals.done("IMS - Network FiveM Andrada City\n\nServer is currently full, try again later!\n\nSorry :(")
+        if (data and data.success ~= nil) then
+            if (data.success) then
+                if (count >= maxPlayers) then
+                    setKickReason("IMS - Network FiveM Andrada City\n\nServer is currently full, try again later!\n\nSorry :(")
+                else
+                    deferrals.done()
+                end
             else
-                deferrals.done()
+                setKickReason("IMS - Network FiveM Andrada City\n\nYou chose not to connect.\n\nHave A Good Day")
             end
         else
-            deferrals.done("IMS - Network FiveM Andrada City\n\nYou chose not to connect.\n\nHave A Good Day")
+            setKickReason("IMS - Network FiveM Andrada City\n\nInvalid response received.\n\nPlease try again.")
         end
     end
 
