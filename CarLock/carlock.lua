@@ -1,4 +1,3 @@
--- Set up the ESX framework
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
@@ -10,6 +9,9 @@ function onVehicleEntered(player, vehicle)
   -- If the vehicle is locked to the player, allow them to enter it
   if locked then
     CancelEvent()
+  else
+    -- If the vehicle is not locked to the player, show an error message
+    ESX.ShowNotification('This vehicle is locked to another player')
   end
 end
 
