@@ -1,8 +1,8 @@
 fx_version 'adamant'
 games { 'gta5' }
 
-author 'Your Name'
-description 'A vehicle locking and unlocking system for GTA V'
+author 'Andrada-City'
+description 'A vehicle locking and unlocking system for Andrada City Server'
 version '1.0.0'
 
 client_scripts {
