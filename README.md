@@ -19,6 +19,6 @@ Andrada City also uses paid licensed code and we give credit to those developers
 > The website backend code is also opensource so if any developer wants to fix issues on his page [click here](https://github.com/IMS-Network/IMS-Copyrights)
 
 ### [Copyright Website](https://open-source.ims-network.org/tags/fivem/)
-> **Warning**
+> **Warning**\
 > While we try to give credit to everyone if you have any disputes with us using your code in our Grand Theft Auto V FiveM Modifed server please reach out at legal@ims-network.net
 
