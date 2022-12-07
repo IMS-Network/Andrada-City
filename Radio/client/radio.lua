@@ -55,16 +55,26 @@ Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
 
-    -- Check if the player is in a vehicle
-    if IsPedInAnyVehicle(PlayerPedId(), false) then
-      -- Check if the player pressed the input to open the radio station menu
-      if IsControlJustPressed(0, 38) then
-        -- Open the radio station menu
-        ESX.UI.Menu.Open("radio_station", {}, function(data, menu)
-          -- Check if the player pressed the input to change the radio station
-          if IsControlJustPressed(0, 38) then
-            -- Change the radio station
-            SetRadioToStationName(station.name)
+-- Check if the player is in a vehicle
+local playerPed = PlayerPedId()
+if IsPedInAnyVehicle(playerPed, false) then
+  -- Check if the player pressed the horn button
+  if IsControlJustPressed(0, 86) then
+    -- Open the radio menu
+    ESX.UI.Menu.Open("radio", {}, function(data, menu)
+      -- Set the radio station
+      SetMobileRadioEnabledDuringGameplay(true)
+      SetRadioToStationName(data.current.value)
 
-            -- Notify the player that the radio station was changed
-            ESX.ShowNotification("Changed radio station
+      -- Notify the player that the radio station was changed
+      ESX.ShowNotification("The radio station was changed to " .. data.current.label .. ".")
+
+      -- Close the radio menu
+      menu.close()
+    end, function(data, menu)
+      -- Close the radio menu
+      menu.close()
+    end)
+  end
+end
+end)
