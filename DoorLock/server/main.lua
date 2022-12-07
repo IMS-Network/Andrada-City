@@ -19,6 +19,14 @@ local config = {
   logUpdates = false -- Set to true to enable logging of door state updates
 }
 
+-- Load the configuration file
+Citizen.CreateThread(function()
+  local cfg = LoadResourceFile(GetCurrentResourceName(), "config/server.yml")
+  if cfg then
+    config = yaml.decode(cfg)
+  end
+end)
+
 -- Define event handlers
 AddEventHandler('doorlock:updateState', function(doorId, state)
   -- Update the door state in the database
