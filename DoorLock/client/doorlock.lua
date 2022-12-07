@@ -1,6 +1,4 @@
--- Door lock script for FiveM using the ESX framework
-
--- This script allows players to lock and unlock doors using the "E" key
+-- client/doorlock.lua
 
 -- Define the ESX framework
 ESX = nil
@@ -10,6 +8,19 @@ Citizen.CreateThread(function()
   while ESX == nil do
     TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
     Citizen.Wait(0)
+  end
+end)
+
+-- Define the configuration options
+local config = {
+  key = "E" -- The key that players can use to lock and unlock doors
+}
+
+-- Load the configuration file
+Citizen.CreateThread(function()
+  local cfg = LoadResourceFile(GetCurrentResourceName(), "config/server.yml")
+  if cfg then
+    config = yaml.decode(cfg)
   end
 end)
 
@@ -37,11 +48,11 @@ Citizen.CreateThread(function()
       if distance <= 1.0 then
         -- Draw a text prompt on the player's screen
         SetTextComponentFormat("STRING")
-        AddTextComponentString("Press E to lock/unlock the door")
+        AddTextComponentString("Press " .. config.key .. " to lock/unlock the door")
         DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 
-        -- Check if the player pressed the "E" key
-        if IsControlJustPressed(0, 38) then
+        -- Check if the player pressed the specified key
+        if IsControlJustPressed(0, GetKeyCode(config.key)) then
           -- Check if the door is locked
           if door.lockStatus then
             -- Unlock the door
