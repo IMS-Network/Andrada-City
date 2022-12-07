@@ -21,7 +21,7 @@ local config = {
 
 -- Load the configuration file
 Citizen.CreateThread(function()
-  local cfg = LoadResourceFile(GetCurrentResourceName(), "config/server.yml")
+  local cfg = LoadResourceFile(GetCurrentResourceName(), "config/settigns.yml")
   if cfg then
     config = yaml.decode(cfg)
   end
