@@ -1,0 +1,7 @@
+radio-stations:
+  - name: "Radio Los Santos"
+    url: "http://caster02.streampower.be/los-santos-rock-radio"
+  - name: "Radio Mirror Park"
+    url: "http://caster02.streampower.be/radio-mirror-park"
+  - name: "Radio West Coast Classics"
+    url: "http://caster02.streampower.be/west-coast-classics"
