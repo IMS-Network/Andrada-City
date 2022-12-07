@@ -11,17 +11,32 @@ Citizen.CreateThread(function()
   end
 end)
 
--- Define the custom radio station
-local station = {
-  name = "My Radio Station",
-  url = "https://cdn.cybercdn.live/Pervoia/Audio/icecast.audio"
+-- Define the configuration options
+local config = {
+  key = "INPUT_PICKUP" -- The key that players can use to change the radio station
+}
+
+-- Load the configuration file
+Citizen.CreateThread(function()
+  local cfg = LoadResourceFile(GetCurrentResourceName(), "config/client.yml")
+  if cfg then
+    config = yaml.decode(cfg)
+  end
+end)
+
+-- Define the radio stations
+local radioStations = {
+  {
+    name = "My Radio Station",
+    url = "https://cdn.cybercdn.live/Pervoia/Audio/icecast.audio"
+  }
 }
 
 -- Load the radio station configuration from the radio-settings.yml file
 Citizen.CreateThread(function()
   local cfg = LoadResourceFile(GetCurrentResourceName(), "radio-settings.yml")
   if cfg then
-    station = yaml.decode(cfg)
+    radioStations = yaml.decode(cfg)
   end
 end)
 
@@ -31,8 +46,16 @@ ESX.UI.Menu.RegisterType("radio_station", function(data)
 
   -- Add a label to the menu
   table.insert(elements, {
-    label = "Press ~INPUT_PICKUP~ to change the radio station"
+    label = "Press " .. config.key .. " to change the radio station"
   })
+
+  -- Add each radio station to the menu
+  for i,station in ipairs(radioStations) do
+    table.insert(elements, {
+      label = station.name,
+      value = station.url
+    })
+  end
 
   return {
     type = "menu",
@@ -45,9 +68,11 @@ end)
 -- Set the audio flag to allow custom URLs to be played as radio stations
 SetAudioFlag("AllowCustomUrl", true)
 
--- Add the custom radio station to the game
+-- Add each radio station to the game
 Citizen.CreateThread(function()
-  AddRadioStation(station.name, station.url)
+  for i,station in ipairs(radioStations) do
+    AddRadioStation(station.name, station.url)
+  end
 end)
 
 -- Main loop
@@ -61,7 +86,7 @@ if IsPedInAnyVehicle(playerPed, false) then
   -- Check if the player pressed the horn button
   if IsControlJustPressed(0, 86) then
     -- Open the radio menu
-    ESX.UI.Menu.Open("radio", {}, function(data, menu)
+    ESX.UI.Menu.Open("radio_station", {}, function(data, menu)
       -- Set the radio station
       SetMobileRadioEnabledDuringGameplay(true)
       SetRadioToStationName(data.current.value)
