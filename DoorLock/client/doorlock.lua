@@ -83,7 +83,6 @@ Citizen.CreateThread(function()
           -- Close the door lock menu
           menu.close()
         end)
-        end)
       end
     end
   end
