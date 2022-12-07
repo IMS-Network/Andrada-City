@@ -25,12 +25,24 @@ Citizen.CreateThread(function()
 end)
 
 -- Define the door list
-local doorList = {
-  -- doorId: {object, lockStatus}
-  [1] = {object = GetClosestObjectOfType(x, y, z, radius, model, isMission, p7, p8, p9), lockStatus = true},
-  [2] = {object = GetClosestObjectOfType(x, y, z, radius, model, isMission, p7, p8, p9), lockStatus = true},
-  ...
-}
+local doorList = {}
+
+-- Register a custom menu type for the door lock menu
+ESX.UI.Menu.RegisterType("doorlock", function(data)
+  local elements = {}
+
+  -- Add a label to the menu
+  table.insert(elements, {
+    label = "Press " .. config.key .. " to lock/unlock the door"
+  })
+
+  return {
+    type = "menu",
+    name = "doorlock",
+    title = "Door Lock",
+    elements = elements
+  }
+end)
 
 -- Main loop
 Citizen.CreateThread(function()
@@ -46,31 +58,34 @@ Citizen.CreateThread(function()
       local distance = GetDistanceBetweenCoords(playerCoords, doorCoords, true)
 
       if distance <= 1.0 then
-        -- Draw a text prompt on the player's screen
-        SetTextComponentFormat("STRING")
-        AddTextComponentString("Press " .. config.key .. " to lock/unlock the door")
-        DisplayHelpTextFromStringLabel(0, 0, 1, -1)
+        -- Open the door lock menu
+        ESX.UI.Menu.Open("doorlock", {}, function(data, menu)
+          -- Check if the player pressed the key to lock or unlock the door
+          if IsControlJustPressed(0, config.key) then
+            -- Check if the door is locked
+            if door.isLocked then
+              -- Unlock the door
+              door.isLocked = false
+              ESX.Game.SetDoorState(door.object, false)
 
-        -- Check if the player pressed the specified key
-        if IsControlJustPressed(0, GetKeyCode(config.key)) then
-          -- Check if the door is locked
-          if door.lockStatus then
-            -- Unlock the door
-            door.lockStatus = false
-            SetStateOfClosestDoorOfType(model, x, y, z, locked, p5, p6)
+              -- Notify the player that the door is unlocked
+              ESX.ShowNotification("The door is now ~g~unlocked~w~.")
+            else
+              -- Lock the door
+              door.isLocked = true
+              ESX.Game.SetDoorState(door.object, true)
 
-            -- Notify the player that the door is unlocked
-            ESX.ShowNotification("The door is now ~g~unlocked~w~.")
-          else
-            -- Lock the door
-            door.lockStatus = true
-            SetStateOfClosestDoorOfType(model, x, y, z, locked, p5, p6)
-
-            -- Notify the player that the door is locked
-            ESX.ShowNotification("The door is now ~r~locked~w~.")
+              -- Notify the player that the door is locked
+              ESX.ShowNotification("The door is now ~r~locked~w~.")
+            end
           end
-        end
+        end, function(data, menu)
+          -- Close the door lock menu
+          menu.close()
+        end)
+        end)
       end
     end
   end
 end)
+   
