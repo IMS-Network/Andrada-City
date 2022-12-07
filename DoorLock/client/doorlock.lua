@@ -87,4 +87,12 @@ Citizen.CreateThread(function()
     end
   end
 end)
+
+-- Update the door list
+Citizen.CreateThread(function()
+  while true do
+    Citizen.Wait(1000)
+    doorList = ESX.Game.GetDoorList()
+  end
+end)
    
