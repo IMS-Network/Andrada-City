@@ -1,0 +1,4 @@
+# Configuration file for the doorlock resource
+
+# Set to true to enable logging of door state updates
+logUpdates: false
