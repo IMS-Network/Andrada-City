@@ -1,4 +1,7 @@
 # Configuration file for the doorlock resource
 
 # Set to true to enable logging of door state updates
-logUpdates: false
+logUpdates: true
+
+# The key that players can use to lock and unlock doors
+key: "E"
