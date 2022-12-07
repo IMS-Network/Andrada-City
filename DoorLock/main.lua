@@ -20,5 +20,11 @@ AddEventHandler('doorlock:updateState', function(doorId, state)
   MySQL.Async.execute('UPDATE doors SET state = @state WHERE id = @doorId', {
     ['@state'] = state,
     ['@doorId'] = doorId
-  })
+  }, function(rowsChanged, error)
+    if error then
+      print(string.format("Error updating door %d: %s", doorId, error))
+    else
+      print(string.format("Updated door %d with state %d", doorId, state))
+    end
+  end)
 end)
