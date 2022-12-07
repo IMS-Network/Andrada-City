@@ -1,0 +1,11 @@
+# List of radio stations
+stations:
+  - name: "Rock Radio"
+    url: "https://rock-radio.com/stream"
+  - name: "Pop Radio"
+    url: "https://pop-radio.com/stream"
+  - name: "Classical Radio"
+    url: "https://classical-radio.com/stream"
+
+# Default radio station
+default: "Rock Radio"
