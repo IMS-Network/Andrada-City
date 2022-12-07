@@ -14,6 +14,11 @@ end)
 -- Register server events
 RegisterServerEvent('doorlock:updateState')
 
+-- Define the configuration options
+local config = {
+  logUpdates = false -- Set to true to enable logging of door state updates
+}
+
 -- Define event handlers
 AddEventHandler('doorlock:updateState', function(doorId, state)
   -- Update the door state in the database
@@ -22,9 +27,13 @@ AddEventHandler('doorlock:updateState', function(doorId, state)
     ['@doorId'] = doorId
   }, function(rowsChanged, error)
     if error then
-      print(string.format("Error updating door %d: %s", doorId, error))
+      if config.logUpdates then
+        print(string.format("Error updating door %d: %s", doorId, error))
+      end
     else
-      print(string.format("Updated door %d with state %d", doorId, state))
+      if config.logUpdates then
+        print(string.format("Updated door %d with state %d", doorId, state))
+      end
     end
   end)
 end)
