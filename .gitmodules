@@ -45,7 +45,3 @@
 [submodule "vehcontrol"]
 	path = vehcontrol
 	url = https://github.com/Manvaril/vehcontrol
-# DeffoN0tSt3
-[submodule "3d-me-do"]
-	path = 3d-me-do
-	url = https://github.com/DeffoN0tSt3/3d-me-do.git
