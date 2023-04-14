@@ -1,47 +1,47 @@
 [submodule "pma-voice"]
 	path = pma-voice
-	url = https://github.com/AvarianKnight/pma-voice
+	url = https://github.com/AvarianKnight/pma-voice.git
 [submodule "vMenu"]
 	path = vMenu
-	url = https://github.com/TomGrobbe/vMenu
+	url = https://github.com/TomGrobbe/vMenu.git
 # ProjectError
 [submodule "ProjectError/npwd"]
 	path = ProjectError/npwd
-	url = https://github.com/project-error/npwd
+	url = https://github.com/project-error/npwd.git
 [submodule "ProjectError/pefcl"]
 	path = ProjectError/pefcl
-	url = https://github.com/project-error/pefcl
+	url = https://github.com/project-error/pefcl.git
 [submodule "ProjectError/screenshot-basic"]
 	path = ProjectError/screenshot-basic
-	url = https://github.com/project-error/screenshot-basic
+	url = https://github.com/project-error/screenshot-basic.git
 [submodule "ProjectError/esx-npwd"]
 	path = ProjectError/esx-npwd
-	url = https://github.com/overextended/esx-npwd
+	url = https://github.com/overextended/esx-npwd.git
 # Overextended
 [submodule "Overextended/oxmysql"]
 	path = Overextended/oxmysql
-	url = https://github.com/overextended/oxmysql
+	url = https://github.com/overextended/oxmysql.git
 [submodule "Overextended/ox_core"]
 	path = Overextended/ox_core
-	url = https://github.com/overextended/ox_core
+	url = https://github.com/overextended/ox_core.git
 [submodule "Overextended/ox_lib"]
 	path = Overextended/ox_lib
-	url = https://github.com/overextended/ox_lib
+	url = https://github.com/overextended/ox_lib.git
 [submodule "Overextended/ox_target"]
 	path = Overextended/ox_target
-	url = https://github.com/overextended/ox_target
+	url = https://github.com/overextended/ox_target.git
 [submodule "ProjectError/pefcl-esx"]
 	path = ProjectError/pefcl-esx
-	url = https://github.com/project-error/pefcl-esx
+	url = https://github.com/project-error/pefcl-esx.git
 # andristum
 [submodule "dpclothing"]
 	path = dpclothing
-	url = https://github.com/andristum/dpclothing
+	url = https://github.com/andristum/dpclothing.git
 # esx-framework
 [submodule "esx-legacy"]
 	path = esx-legacy
-	url = https://github.com/esx-framework/esx-legacy
+	url = https://github.com/esx-framework/esx-legacy.git
 # Manvaril
 [submodule "vehcontrol"]
 	path = vehcontrol
-	url = https://github.com/Manvaril/vehcontrol
+	url = https://github.com/Manvaril/vehcontrol.git
